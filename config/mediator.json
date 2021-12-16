@@ -1,0 +1,51 @@
+{
+  "urn": "urn:uuid:e35736d0-5e49-11ec-8be4-2f9f2061c371",
+  "version": "0.0.1",
+  "name": "js-mediator",
+  "description": "hello world",
+  "defaultChannelConfig": [
+    {
+      "name": "js-mediator",
+      "urlPattern": "channelPath",
+      "alerts": [],
+      "txRerunAcl": [],
+      "txViewFullAcl": [],
+      "txViewAcl": [],
+      "properties": [],
+      "matchContentTypes": [],
+      "routes": [
+        {
+          "name": "js-mediator Route",
+          "host": "localhost",
+          "port": "7000",
+          "primary": true,
+          "type": "http"
+        }
+      ],
+      "allow": ["admin"],
+      "type": "http"
+    }
+  ],
+  "endpoints": [
+    {
+      "name": "js-mediator Route",
+      "host": "localhost",
+      "path": "/",
+      "port": "7000",
+      "primary": true,
+      "type": "http"
+    }
+  ],
+  "configDefs": [
+    {
+      "param": "upstreamUrl",
+      "displayName": "Upstream URL",
+      "description": "The URL of the service upstream of the mediator",
+      "type": "string",
+      "template": []
+    }
+  ],
+  "config": {
+    "upstreamUrl": "http://sampleApplication:7001"
+  }
+}
